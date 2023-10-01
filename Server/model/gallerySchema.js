@@ -1,15 +1,15 @@
 import mongoose from "mongoose"
 
-const schema = new mongoose.schema({
+const schema = new mongoose.Schema({
     name:{
         type: String
     },
     category:{
         type: mongoose.Schema.Types.ObjectId,
-        ref: "category"
+        ref: "categorySchema"
     }
 })
 
-const galleyModel = mongoose.model("gallery", schema)
+const galleryModel = mongoose.model("gallerySchema", schema)
 
 export default galleryModel
